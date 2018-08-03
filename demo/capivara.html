@@ -11,14 +11,14 @@
 
 <body>
 
-    <cp-mask my-parameter="$ctrl.message"></cp-mask>
+    <cp-mask capivara-mask="$ctrl.capivaraMask"></cp-mask>
 
     <script src="../dist/cp-mask.js"></script>
 
     <script>
         class MyController {
             constructor() {
-                this.message = 'Hello world - CapivaraJS';
+                this.capivaraMask = '000.000.000-00';
             }
         }
         capivara.controller(document.body, MyController);

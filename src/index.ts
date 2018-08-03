@@ -2,6 +2,8 @@
     Component created by capivara-cli https://capivarajs.github.io/
 */
 import capivara from 'capivarajs';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min.js'
 import template from './component/mask.template.html';
 import style from './component/mask.style.scss';
 import { CapivaraMask } from './component/mask.component';
@@ -31,7 +33,7 @@ const Component = {
      * @name bindings
      * @description Declares the variables that will be accepted by component. See https://capivarajs.github.io/components.html#bindings
      */
-    bindings: ['myParameter'],
+    bindings: ['capivaraMask', 'lazyPlaceholder', 'inputClass'],
     /**
      * @name controller
      * @description Sets the scope of the component
