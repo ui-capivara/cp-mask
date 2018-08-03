@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo in Angular.js</title>
+    <link rel="stylesheet" href="../dist/cp-mask.css" />
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+
+    <div id="example">
+      <cp-mask my-parameter="message"></cp-mask>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="../dist/cp-mask.js"></script>
+
+    <script>
+        new Vue({
+          el: '#example',
+          data: {
+            message: 'Hello world - Vue.js'
+          },
+          mounted() {}
+        });
+
+    </script>
+
+</body>
+
+</html>

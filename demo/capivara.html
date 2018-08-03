@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo in CapivaraJS</title>
+    <link rel="stylesheet" href="../dist/cp-mask.css" />
+</head>
+
+<body>
+
+    <cp-mask my-parameter="$ctrl.message"></cp-mask>
+
+    <script src="../dist/cp-mask.js"></script>
+
+    <script>
+        class MyController {
+            constructor() {
+                this.message = 'Hello world - CapivaraJS';
+            }
+        }
+        capivara.controller(document.body, MyController);
+    </script>
+
+</body>
+
+</html>
