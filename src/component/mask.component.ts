@@ -23,7 +23,7 @@ export class CapivaraMask {
 
         // Check if has class to the input and placeholder
         this.inputClass = this.$bindings.inputClass ? this.$bindings.inputClass : 'form-control'
-        this.lazyPlaceholder = this.$bindings.lazyPlaceholder ? this.$bindings.lazyPlaceholder : false
+        this.lazyPlaceholder = this.$bindings.lazyPlaceholder == null ? false : !this.$bindings.lazyPlaceholder
 
         this.capivaraMask = this.$bindings.capivaraMask
 
