@@ -5,7 +5,6 @@ export class CapivaraMask {
     public $functions;
     public $bindings;
 
-
     private capivaraMask: string
     private inputClass: string
     private lazyPlaceholder: boolean

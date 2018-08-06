@@ -59,9 +59,11 @@ O componente possui alguns parâmetros para a customização, a tabela abaixo mo
 
 |       Atributo       |   Tipo   | Requerido |  Descrição |
 |:--------------------:|:--------:|:---------:|:----------:|
-| capivara-mask        | `String`    |   `Sim`   | A mascara que será utilizada no `input`, quando for necessário colocar dígitos, deve-se utilizar 0 para delimitar suas posições  |
+| capivara-mask        | `String`    |   `Sim`   | A mascara que será utilizada no `input`, quando for necessário colocar números, deve-se utilizar `0` para delimitar suas posições e caso queira ser utilizado caracteres, deve-se utilizar `a`  |
 |      input-class     | `String` |   `Não`   | Classe que será aplicada no elemento `input`. DEFAULT: `form-control` |
 | lazy-placeholder     | `boolean` |   `Não`  | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true` |
+
+!> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/)
 
 # Exemplo
 
