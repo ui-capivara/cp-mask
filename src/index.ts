@@ -2,8 +2,6 @@
     Component created by capivara-cli https://capivarajs.github.io/
 */
 import capivara from 'capivarajs';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.min.js'
 import template from './component/mask.template.html';
 import style from './component/mask.style.scss';
 import { CapivaraMask } from './component/mask.component';

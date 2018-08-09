@@ -51,10 +51,7 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "bootstrap": "^4.1.2",
     "capivarajs": "3.5.0",
-    "imask": "^3.4.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "imask": "^3.4.0"
   }
 }
