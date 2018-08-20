@@ -1,4 +1,4 @@
-/* 
+/*
     Component created by capivara-cli https://capivarajs.github.io/
 */
 import capivara from 'capivarajs';
@@ -21,7 +21,7 @@ const Component = {
      * @name constants
      * @description Declares the constants that will be accepted by component. See https://capivarajs.github.io/components.html#constants
      */
-    constants: [],
+    constants: ['mask', 'placeholder', 'class'],
     /**
      * @name functions
      * @description Declares the functions that will be accepted by component. See https://capivarajs.github.io/components.html#functions
@@ -31,7 +31,7 @@ const Component = {
      * @name bindings
      * @description Declares the variables that will be accepted by component. See https://capivarajs.github.io/components.html#bindings
      */
-    bindings: ['capivaraMask', 'lazyPlaceholder', 'inputClass'],
+    bindings: ['cpModel'],
     /**
      * @name controller
      * @description Sets the scope of the component

@@ -1,36 +1,38 @@
 import IMask from 'imask';
 
 export class CapivaraMask {
-    public $constants;
-    public $functions;
-    public $bindings;
+  public $constants;
+  public $functions;
+  public $bindings;
 
-    private capivaraMask: string
-    private inputClass: string
-    private lazyPlaceholder: boolean
-    private mask: any
-    private element: HTMLElement
+  private mask: any;
 
-    constructor(private $scope, private $element) {
-        this.element = $element
+  constructor(public $scope, public $element) { }
+
+  $onInit() {
+    if (!this.$constants.mask) {
+      throw new Error('mask é um parâmetro obrigatório.')
     }
+    this.applyMask();
+  }
 
-    $onInit() {
-        if (!this.$bindings.capivaraMask) {
-            throw new Error('capivaraMask é um parâmetro obrigatório')
-        }
+  $destroy() {
+    this.mask.off('accept');
+    this.mask.off('complete');
+    this.mask.destroy();
+  }
 
-        // Check if has class to the input and placeholder
-        this.inputClass = this.$bindings.inputClass ? this.$bindings.inputClass : 'form-control'
-        this.lazyPlaceholder = this.$bindings.lazyPlaceholder == null ? false : !this.$bindings.lazyPlaceholder
+  applyMask() {
+    const maskOptions = {
+      mask: this.$constants.mask,
+      lazy: !!this.$constants.placeholder,
+    };
+    this.mask = new IMask(this.$element.querySelector('input'), maskOptions);
+    this.mask.on('accept', () => this.$bindings.cpModel = null);
+    this.mask.on('complete', () => {
+      this.$bindings.cpModel = this.mask.unmaskedValue;
+    });
+    this.mask.value = this.$bindings.cpModel;
+  }
 
-        this.capivaraMask = this.$bindings.capivaraMask
-
-        var maskOptions = {
-            mask: this.capivaraMask,
-            lazy: this.lazyPlaceholder
-        };
-        this.mask = new IMask(this.element.getElementsByTagName('input')[0], maskOptions);
-        this.mask.on()
-    }
 }

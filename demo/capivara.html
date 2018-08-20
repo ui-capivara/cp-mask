@@ -2,27 +2,54 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demo in CapivaraJS</title>
-    <link rel="stylesheet" href="../dist/cp-mask.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Demo in CapivaraJS</title>
+  <link rel="stylesheet"
+        href="../dist/cp-mask.css" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  <style>
+    [padding] {
+      padding: 34px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <cp-mask capivara-mask="$ctrl.capivaraMask" lazy-placeholder="$ctrl.lazyPlaceholder"></cp-mask>
+  <div class="container"
+       padding>
+    <div class="row">
+      <div class="col-md-4">
 
-    <script src="../dist/cp-mask.js"></script>
+        <cp-mask mask="'000.000.000-00'"
+                 cp-model="$ctrl.myCPF"
+                 placeholder="'Informe seu CPF'"></cp-mask>
 
-    <script>
-        class MyController {
-            constructor() {
-                this.capivaraMask = '000.000.000-00';
-            }
-        }
-        capivara.controller(document.body, MyController);
-    </script>
+        <p>Valor do CPF: [[ $ctrl.myCPF ]]</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="../dist/cp-mask.js"></script>
+
+  <script>
+    class MyController {
+      constructor() {
+        this.myCPF = '10790569981';
+      }
+    }
+    capivara.controller(document.body, MyController);
+  </script>
 
 </body>
 

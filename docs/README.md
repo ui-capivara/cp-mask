@@ -38,7 +38,7 @@ Se chegamos até aqui, provavelmente a instalação foi finalizada êxito, isso 
 Vamos agora criar uma nova instância do componente. Para isso basta colocarmos no HTML o nome do compoente e também uma `class` que possuirá as propriedades de configuração do componente.
 
 ```html
-<cp-mask capivara-mask="$ctrl.capivaraMask"> </cp-mask>
+<cp-mask mask="$ctrl.capivaraMask"> </cp-mask>
 ```
 
 ```javascript
@@ -50,43 +50,39 @@ class MyController {
 capivara.controller(document.body, MyController);
 ```
 
-!> Lembre-se de que é necessário colocar o código `JavaScript` dentro de um elemento `<scipt>` no `HTML`.
+!> Lembre-se de que é necessário colocar o código `JavaScript` dentro de um elemento `<script>` no `HTML`.
 
 
 ## Parâmetros
 
 O componente possui alguns parâmetros para a customização, a tabela abaixo mostra mais informações sobre eles
 
-|       Atributo       |   Tipo   | Requerido |  Descrição |
-|:--------------------:|:--------:|:---------:|:----------:|
-| capivara-mask        | `String`    |   `Sim`   | A mascara que será utilizada no `input`, quando for necessário colocar números, deve-se utilizar `0` para delimitar suas posições e caso queira ser utilizado caracteres, deve-se utilizar `a`  |
-|      input-class     | `String` |   `Não`   | Classe que será aplicada no elemento `input`. DEFAULT: `form-control` |
-| lazy-placeholder     | `boolean` |   `Não`  | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true` |
+| Atributo         | Tipo      | Requerido | Descrição                                                                                                                                                                                      |
+| :--------------: | :-------: | :-------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| mask    | `String`  | `Sim`     | A mascara que será utilizada no `input`, quando for necessário colocar números, deve-se utilizar `0` para delimitar suas posições e caso queira ser utilizado caracteres, deve-se utilizar `a` |
+| placeholder | `boolean` | `Não`     | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true`                                                                                       |
 
 !> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/)
 
 # Exemplo
 
-O exemplo abaixo mostra a utilização de todos os parâmetros que o componente possui, vale lembrar que o único parâmetro obrigatório é o `capivara-mask`. O exemplo mostra como devemos configurar o componente com as customizações desejadas.
+O exemplo abaixo mostra a utilização de todos os parâmetros que o componente possui, vale lembrar que o único parâmetro obrigatório é o `mask`. O exemplo mostra como devemos configurar o componente com as customizações desejadas.
 
-```js
+```html
 <form name="Example">
   <label>Telefone</label>
     <cp-mask 
-        capivara-mask="$ctrl.capivaramaskMaxLength"
-        lazy-placeholder="$ctrl.lazyPlaceholder"
-        input-class="$ctrl.inputClass"
+        mask="'(00) 0 0000-0000'",
+        cp-model="$ctrl.myPhone"
     ></cp-mask>
 </form>
 ```
 
-```html
+```js
     <script>
         class MyController {
             constructor() {
-                this.capivaraMask = '(00) 0 0000-0000';
-                this.lazyPlaceholder = true;
-                this.inputClass = 'form-control'
+                this.myPhone = '(44) 9 9705-0785';
             }
         }
         capivara.controller(document.body, MyController);
