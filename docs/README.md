@@ -72,7 +72,7 @@ O exemplo abaixo mostra a utilização de todos os parâmetros que o componente 
 <form name="Example">
   <label>Telefone</label>
     <cp-mask 
-        mask="'(00) 0 0000-0000'",
+        mask="'(00) 0 0000-0000'"
         cp-model="$ctrl.myPhone"
     ></cp-mask>
 </form>
