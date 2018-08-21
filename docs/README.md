@@ -57,12 +57,22 @@ capivara.controller(document.body, MyController);
 
 O componente possui alguns parâmetros para a customização, a tabela abaixo mostra mais informações sobre eles
 
-| Atributo         | Tipo      | Requerido | Descrição                                                                                                                                                                                      |
-| :--------------: | :-------: | :-------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| mask    | `String`  | `Sim`     | A mascara que será utilizada no `input`, quando for necessário colocar números, deve-se utilizar `0` para delimitar suas posições e caso queira ser utilizado caracteres, deve-se utilizar `a` |
-| placeholder | `boolean` | `Não`     | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true`                                                                                       |
+| Atributo    | Tipo      | Requerido | Descrição |
+| :---------: | :-------: | :-------: | :------------------------------------------------------------------------------------------------------: |
+| mask        | `String`  | `Sim`     | É a máscara que será utilizada no `input`                                                                |
+| placeholder | `boolean` | `Não`     | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true`.|
+| cp-model    | `String`  | `Não`     | Variável que recebe o valor digitado no `input`.                                                         |
 
-!> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/)
+
+Para a utilização da máscara deve-se utilizar alguns caracteres especiais para delimitar qual valor cada posição pode possuir. A Tabela abaixo mostra quais são esses valores.
+
+| Tipo Requerido      | Símbolo |
+| :--------------:    | :-------: | :------------: |
+| `Número`            | `0`     | Quando uma posição da máscara possuir esse valor, qualquer número de `0-9` será aceito.|
+| `Caracter`          | `a`     | Quando uma posição da máscara possuir esse valor, qualquer caracter de `a-zA-Z` será aceito.|
+| `Qualquer Símbolo`  | `*`     | Quando uma posição da máscara possuir esse valor qualquer tecla possível pode ser adicionada.|
+
+!> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/guide.html)
 
 # Exemplo
 
