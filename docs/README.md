@@ -64,7 +64,7 @@ O componente possui alguns parâmetros para a customização, a tabela abaixo mo
 | cp-model    | `String`  | `Não`     | Variável que recebe o valor digitado no `input`.                                                         |
 
 
-Para a utilização da máscara deve-se utilizar alguns caracteres especiais para delimitar qual valor cada posição pode possuir. A Tabela abaixo mostra quais são esses valores.
+Para a utilização da máscara devem ser inseridos caracteres especiais que delimitam o valor ao qual cada posição pode possuir. A Tabela abaixo mostra quais são esses caracteres.
 
 | Tipo Requerido      | Símbolo | Descrição |
 | :--------------:    | :-------: | :------------: |
