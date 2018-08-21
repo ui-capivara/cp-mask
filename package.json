@@ -1,11 +1,11 @@
 {
-  "name": "cp-mask",
+  "name": "@uicapivara/cp-mask",
   "version": "1.0.0",
   "description": "cp-mask",
   "main": "src/index.ts",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
-    "prod": "npm run test-once && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js",
+    "prod": "webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js",
     "test": "karma start",
     "test-once": "karma start --single-run"
   },
