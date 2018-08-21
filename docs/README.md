@@ -66,7 +66,7 @@ O componente possui alguns parâmetros para a customização, a tabela abaixo mo
 
 Para a utilização da máscara deve-se utilizar alguns caracteres especiais para delimitar qual valor cada posição pode possuir. A Tabela abaixo mostra quais são esses valores.
 
-| Tipo Requerido      | Símbolo |
+| Tipo Requerido      | Símbolo | Descrição |
 | :--------------:    | :-------: | :------------: |
 | `Número`            | `0`     | Quando uma posição da máscara possuir esse valor, qualquer número de `0-9` será aceito.|
 | `Caracter`          | `a`     | Quando uma posição da máscara possuir esse valor, qualquer caracter de `a-zA-Z` será aceito.|
