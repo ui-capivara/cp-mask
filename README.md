@@ -31,3 +31,5 @@ Caso contrário é necessário importa-los especificando o arquivo **js**. Exemp
 ```javascript
 import '@uicapivara/cp-mask/index.js';
 ```
+
+Você pode acessar a documentação completa do componente clicando [aqui](https://ui-capivara.github.io/cp-mask/#/).
