@@ -5,7 +5,7 @@ O componente cp-mask permite adicionar máscaras aos elementos inputs que se faz
 # Instalação
 
 ## CDN
-Recomendamos vincular a um número de versão específico que você possa atualizar manualmente, porém no exemplo iremos utilizar a ultima versão disponível.
+Recomendamos vincular a um número de versão específico que você possa atualizar manualmente.
 ```html
 <!-- Stylesheet -->
 <link rel="stylesheet" href="https://unpkg.com/@uicapivara/cp-mask@latest/dist/cp-mask.min.css">
@@ -13,7 +13,6 @@ Recomendamos vincular a um número de versão específico que você possa atuali
 <!-- Component -->
 <script src="https://unpkg.com/@uicapivara/cp-mask@latest/dist/cp-mask.min.js"></script>
 ```
-Certifique-se de ler sobre as diferentes construções e use a produção, substituindo os arquivos .js por .min.js. Esta é uma compilação otimizada para velocidade em vez de experiência de desenvolvimento.
 
 ## NPM
 O NPM é o método de instalação recomendado ao criar aplicativos de grande escala. Ele combina muito bem com bundlers de módulo, como Webpack ou Browserify.
