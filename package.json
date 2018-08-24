@@ -1,5 +1,5 @@
 {
-  "name": "@uicapivara/cp-mask",
+  "name": "cp-mask",
   "version": "1.0.0",
   "description": "cp-mask",
   "main": "src/index.ts",
@@ -14,11 +14,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.42",
+    "@babel/polyfill": "^7.0.0-rc.2",
     "@babel/preset-env": "^7.0.0-beta.42",
     "@types/jasmine": "^2.6.3",
     "@types/node": "^9.4.6",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
     "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -30,9 +29,9 @@
     "karma-jasmine": "^1.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-typescript": "^3.0.8",
+    "karma-typescript-es6-transform": "^1.0.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
-    "script-loader": "^0.7.2",
     "style-loader": "^0.20.3",
     "ts-loader": "^4.1.0",
     "typescript": "^2.7.2",
@@ -51,7 +50,7 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^3.6.2",
+    "capivarajs": "^3.9.1",
     "imask": "^3.4.0"
   }
 }

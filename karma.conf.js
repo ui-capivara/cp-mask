@@ -14,9 +14,10 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/@babel/polyfill/dist/polyfill.js',
       'src/*.ts',
       'src/**/*.ts',
-      './node_modules/babel-polyfill/dist/polyfill.js'
+      'node_modules/capivarajs/**/*.ts'
     ],
 
 
@@ -35,8 +36,28 @@ module.exports = function (config) {
     karmaTypescriptConfig: {
       compilerOptions: {
         lib: ["ES2015", "DOM"]
+      },
+      bundlerOptions: {
+        transforms: [
+          require("karma-typescript-es6-transform")({
+            presets: [
+              ["env", {
+                targets: {
+                  chrome: "60"
+                }
+              }]
+            ]
+          })
+        ]
       }
     },
+
+    babelPreprocessor: {
+      options: {
+        presets: ['@babel/env']
+      }
+    },
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter

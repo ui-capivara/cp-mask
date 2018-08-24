@@ -58,11 +58,12 @@ capivara.controller(document.body, MyController);
 O componente possui alguns parâmetros para a customização, a tabela abaixo mostra mais informações sobre eles
 
 | Atributo    | Tipo      | Requerido | Descrição |
-| :---------: | :-------: | :-------: | :------------------------------------------------------------------------------------------------------: |
-| mask        | `String`  | `Sim`     | É a máscara que será utilizada no `input`                                                                |
-| placeholder | `boolean` | `Não`     | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true`.|
-| cp-model    | `String`  | `Não`     | Variável que recebe o valor digitado no `input`.                                                         |
+| :---------: | :-------: | :-------: | :--------------------------------------------------------: |
+| mask        | `String`  | `Sim`     | É a máscara que será utilizada no `input`.                 |
+| cp-model    | `String`  | `Não`     | Variável que recebe o valor digitado no `input`.           |
 
+
+!> Se não for inserido um placeholder na diretiva `cp-mask`, o valor do placeholder do `input` será o formato da máscara.
 
 Para a utilização da máscara devem ser inseridos caracteres especiais que delimitam o valor ao qual cada posição pode possuir. A Tabela abaixo mostra quais são esses caracteres.
 
