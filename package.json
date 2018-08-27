@@ -1,6 +1,6 @@
 {
   "name": "@uicapivara/cp-mask",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "cp-mask",
   "main": "src/index.ts",
   "scripts": {

@@ -49,6 +49,13 @@ class MyController {
 }
 capivara.controller(document.body, MyController);
 ```
+Disponibilizamos alguns exemplos utilizando o componente juntamente com outros frameworks.
+
+*   CapivaraJS - [JSFiddle](https://jsfiddle.net/1kbLruyq/109/)
+*   Angular.js - [JSFiddle](https://jsfiddle.net/t0b8xxfj/61/)
+*   Angular - [JSFiddle](https://jsfiddle.net/1hk7knwq/8635/)
+*   Vue.js - [JSFiddle](http://jsfiddle.net/td4v7qqd/245/)
+*   React.js - [JSFiddle](http://jsfiddle.net/td4v7qqd/242/)
 
 !> Lembre-se de que é necessário colocar o código `JavaScript` dentro de um elemento `<script>` no `HTML`.
 
@@ -99,3 +106,5 @@ O exemplo abaixo mostra a utilização de todos os parâmetros que o componente 
         capivara.controller(document.body, MyController);
     </script>
 ```
+
+Você pode encontrar esse exemplo no [JSFiddle](https://jsfiddle.net/1kbLruyq/116/).
