@@ -1,13 +1,23 @@
+import { Component, Controller, OnInit } from 'capivarajs';
+import template from './mask.template.html';
+import style from './mask.style.scss';
 import IMask from 'imask';
 
-export class CapivaraMask {
-  public $constants;
-  public $functions;
-  public $bindings;
+@Component({
+  tag: 'cp-mask',
+  template,
+  style,
+  bindings: ['cpModel'],
+  functions: [],
+  constants: ['mask', 'placeholder', 'class'],
+})
+export class CapivaraMask extends Controller implements OnInit {
 
   private mask: any;
 
-  constructor(public $scope, public $element) { }
+  constructor(public $scope, public $element) {
+    super($scope, $element);
+  }
 
   $onInit() {
     if (!this.$constants.mask) {
@@ -34,5 +44,4 @@ export class CapivaraMask {
     });
     this.mask.value = this.$bindings.cpModel;
   }
-
 }

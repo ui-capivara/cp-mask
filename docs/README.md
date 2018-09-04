@@ -49,6 +49,13 @@ class MyController {
 }
 capivara.controller(document.body, MyController);
 ```
+Disponibilizamos alguns exemplos utilizando o componente juntamente com outros frameworks.
+
+*   CapivaraJS - [JSFiddle](https://jsfiddle.net/1kbLruyq/109/)
+*   Angular.js - [JSFiddle](https://jsfiddle.net/t0b8xxfj/61/)
+*   Angular - [JSFiddle](https://jsfiddle.net/1hk7knwq/8635/)
+*   Vue.js - [JSFiddle](http://jsfiddle.net/td4v7qqd/245/)
+*   React.js - [JSFiddle](http://jsfiddle.net/td4v7qqd/242/)
 
 !> Lembre-se de que é necessário colocar o código `JavaScript` dentro de um elemento `<script>` no `HTML`.
 
@@ -57,12 +64,23 @@ capivara.controller(document.body, MyController);
 
 O componente possui alguns parâmetros para a customização, a tabela abaixo mostra mais informações sobre eles
 
-| Atributo         | Tipo      | Requerido | Descrição                                                                                                                                                                                      |
-| :--------------: | :-------: | :-------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| mask    | `String`  | `Sim`     | A mascara que será utilizada no `input`, quando for necessário colocar números, deve-se utilizar `0` para delimitar suas posições e caso queira ser utilizado caracteres, deve-se utilizar `a` |
-| placeholder | `boolean` | `Não`     | Valor booleano que define se o placeholder da máscara será mostrado no elemento `input`. DEFAULT: `true`                                                                                       |
+| Atributo    | Tipo      | Requerido | Descrição |
+| :---------: | :-------: | :-------: | :--------------------------------------------------------: |
+| mask        | `String`  | `Sim`     | É a máscara que será utilizada no `input`.                 |
+| cp-model    | `String`  | `Não`     | Variável que recebe o valor digitado no `input`.           |
 
-!> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/)
+
+!> Se não for inserido um placeholder na diretiva `cp-mask`, o valor do placeholder do `input` será o formato da máscara.
+
+Para a utilização da máscara devem ser inseridos caracteres especiais que delimitam o valor ao qual cada posição pode possuir. A Tabela abaixo mostra quais são esses caracteres.
+
+| Tipo Requerido      | Símbolo | Descrição |
+| :--------------:    | :-------: | :------------: |
+| `Número`            | `0`     | Quando uma posição da máscara possuir esse valor, qualquer número de `0-9` será aceito.|
+| `Caracter`          | `a`     | Quando uma posição da máscara possuir esse valor, qualquer caracter de `a-zA-Z` será aceito.|
+| `Qualquer Símbolo`  | `*`     | Quando uma posição da máscara possuir esse valor qualquer tecla possível pode ser adicionada.|
+
+!> Caso queira ver mais possibilidades sobre a utilização de máscarada do componente, pode-se acessar o site clicando [aqui](https://unmanner.github.io/imaskjs/guide.html)
 
 # Exemplo
 
@@ -88,3 +106,5 @@ O exemplo abaixo mostra a utilização de todos os parâmetros que o componente 
         capivara.controller(document.body, MyController);
     </script>
 ```
+
+Você pode encontrar esse exemplo no [JSFiddle](https://jsfiddle.net/1kbLruyq/116/).
